@@ -1,0 +1,31 @@
+# yml 文件的优势，支持多文档快，用 --- 隔开
+server:
+  port: 8008
+  servlet:
+    context-path: /may # 指定服务访问的路径 localhost:8080/may/hello
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8009
+spring:
+  profiles: dev
+---
+server:
+  port: 8009
+spring:
+    profiles: prod
+---
+name: 马野
+#person:
+#  name: 小明
+#  age: 18
+#  boss: false
+#  birthday: 2019/12/12
+#  maps: {k1: v1,k2: 12}
+#  lists: [小李,小花]
+#  dog:
+#    name: 小狐
+#    age: 2
+
